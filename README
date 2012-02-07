@@ -1,0 +1,97 @@
+.. -*- mode: rst -*-
+
+
+------------------------
+.. README ConfigFiles ..
+------------------------
+
+
+AUTHORS ::
+
+    Kaapii <mrkaapii@gmail.com>
+
+FILES ::
+
+    README
+    emacs/.emacs
+    emacs/.emacs.conf
+    emacs/.myemacs
+    shells/.bashrc
+    shells/.mybashrc
+    vim/.vim
+    vim/.viminfo
+    vim/.vimrc
+
+
+.. Decriptions of the files ..
+------------------------------
+
+    1. Emacs...
+
+    2. Shell...
+
+    3. Vim...
+
+
+
+.. Use ..
+---------
+
+    1. Emacs
+
+* All the files in the directory ``emacs`` must be placed in your
+  `$HOME` directory. You should have ::
+
+       $HOME/.emacs
+       $HOME/.emacs.conf
+       $HOME/.myemacs
+
+* The ``.emacs.conf`` directory contains all the Emacs-Lisp needed for
+  this configuration
+
+* The ``.emacs`` file contains the lines you should copy into your own
+  configuration file (if you have one) so you don't loose it.
+
+* The last file, ``.myemacs`` is the `real` configuration files.
+  It is written in Emacs-Lisp.
+
+* Feel free to have a look in ``.myemacs`` to add new lines.
+
+
+    2. Shell
+
+* All the files in the directory ``shell`` must be placed in your
+  `$HOME` directory. You should have ::
+
+       $HOME/.bashrc
+       $HOME/.mybashrc
+
+* These configurations file only works for a `bash` shell.
+
+* The ``.bashrc`` file contains the lines you should copy into your own
+  configuration file (if you have one) so you don't loose it.
+
+* The are written in Script Shell.
+
+* Feel free to have a look in these files to add or modify your
+  configuration.
+
+
+    3. Vim...
+
+
+
+.. Thanks ..
+------------
+
+Emacs ::
+
+    Micha <micha@lrde.epita.fr>
+    Nicolas Despres <nicolas.despres@lrde.epita.fr>
+    mefyl <mefyl@lrde.epita.fr>
+
+Vim ::
+
+     Thibz
+     Benoit Sigoure <benoit.sigoure@epita.fr>
+     Julien

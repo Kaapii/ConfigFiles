@@ -1,0 +1,74 @@
+#!/bin/bash
+
+ulimit -c 0
+ulimit -u 500 2> /dev/null
+umask 066
+
+# NetSoul
+export PATH="${PATH}:/usr/netsoul/sbin:/usr/netsoul/bin"
+# Heimdal
+export PATH="${PATH}:/usr/kerberos/sbin:/usr/kerberos/bin"
+# Arla
+export PATH="${PATH}:/usr/arla/sbin:/usr/arla/bin"
+# Package
+export PATH="${PATH}:/usr/local/sbin:/usr/local/bin"
+# System
+export PATH="${PATH}:/usr/sbin:/usr/bin:/sbin:/bin"
+# Bocal
+export PATH="${PATH}:/usr/site/sbin:/usr/site/bin"
+# AASM
+export PATH="${PATH}:/u/all/sezer_s/public/charlie/bin"
+# Bison
+export PATH="${PATH}:/home/relet_s/usr/bin"
+
+if [ -e /etc/bash_completion ]; then
+    . /etc/bash_completion
+fi
+
+# Colors
+export Cdef="\[\e[0m\]"
+export CGREEN="\[\e[32m\]"
+export CRED="\[\e[02;31m\]"
+export CSBLUE="\[\e[;46m\]"
+export CBLUE="\[\e[02;36m\]"
+
+export CFLAGS="-Wall -W -Werror -pedantic"
+export PAGER='most'
+export EDITOR='emacs -nw'
+export HISTSIZE=1000
+export MAIL="/u/all/${USER}/mail/${USER}"
+export PAGER='more'
+export PROMPT_COMMAND='export PS1="\n [$CBLUE\w$Cdef]\n$CRED [$?]$Cdef \A $CBLUE$ $Cdef"'
+export SAVEHIST=1000
+export WATCH='all'
+export NNTPSERVER="news"
+
+alias t='tree -C'
+alias c='clear'
+alias td='tree -C -d'
+alias ls='ls --color=auto'
+alias cp='cp -i'
+alias rm='rm -i'
+alias mv='mv -i'
+alias ll='ls -l'
+alias lla='ls -la'
+alias la='ls -a'
+alias j='jobs'
+alias emacs='emacs -nw'
+alias f='firefox'
+alias ne='emacs'
+alias ns='ns_send_msg'
+alias clean='rm -rf *~ .*~ *\#'
+alias z='zlock -immed -text "Kaapii" -pwtext "P8n?fWgh"'
+alias cComp='gcc -Wall -Wextra -Werror -std=c99 -pedantic'
+alias cppComp='g++ -Wall -Wextra -Werror'
+alias halt='poweroff'
+alias valgr='valgrind --leak-check=full --db-attach=yes --show-reachable=yes'
+alias gitb='git branch'
+alias gitc='git checkout'
+alias gits='git status'
+
+if [ -f ${HOME}/.mybashrc ]
+then
+    . ${HOME}/.mybashrc
+fi
